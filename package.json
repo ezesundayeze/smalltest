@@ -1,10 +1,14 @@
 {
   "name": "smalltest",
-  "version": "1.0.0",
-  "description": "really small tests",
+  "version": "2.0.0",
+  "description": "really small javascript tester",
   "main": "index.js",
+  "browser": "index.browser.js",
+  "jsnext:main": "main.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm rollup --config",
+    "test": "node ./tests/smalltest.node.js",
+    "test:browser": "open http:localhost:4041/tests/index.html && python -m SimpleHTTPServer 4041"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/kdoran/smalltest/issues"
   },
-  "homepage": "https://github.com/kdoran/smalltest#readme"
+  "homepage": "https://github.com/kdoran/smalltest#readme",
+  "dependencies": {
+    "lodash.isequal": "^4.5.0"
+  },
+  "devDependencies": {
+    "rollup": "^1.1.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0"
+  }
 }
