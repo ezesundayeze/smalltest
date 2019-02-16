@@ -1,10 +1,8 @@
 {
   "name": "smalltest",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "really small javascript tester",
   "main": "index.js",
-  "browser": "index.browser.js",
-  "jsnext:main": "main.mjs",
   "scripts": {
     "build": "npx rollup --config",
     "test": "node ./tests/smalltest.node.js",

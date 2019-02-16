@@ -1858,20 +1858,23 @@ module.exports = isEqual;
 let testsStarted = 0;
 
 function test (testName, testFunction) {
-  testsStarted++;
-  console.log(`${testsStarted}: ${testName}`);
   const testObject = {
-    equals: (first, second, message) => equals(first, second, message, testName)
+    equals: (first, second, message) => {
+      testsStarted++;
+      return equals(first, second, `${testsStarted}: ${testName} ${message}`)
+    }
   };
   return testFunction(testObject)
 }
 
-function equals (first, second, message, testName) {
+function equals (first, second, message) {
   if (!lodash_isequal(first, second)) {
-    console.error(`${testName}: ${message} failed. comparison was:`);
+    console.error(`${message}: failed. comparison was:`);
     console.log(first);
     console.log(second);
-    throw new Error(`${testName}: ${message} failure stack trace`)
+    throw new Error(`${message} failure`)
+  } else {
+    console.log(`${message} ✓`);
   }
 }
 
