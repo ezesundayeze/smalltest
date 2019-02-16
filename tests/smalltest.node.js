@@ -17,3 +17,27 @@ try {
 } catch (error) {
   console.log(error instanceof Error)
 }
+
+test('Test function async', async t => {
+  const actual = {allGood: true}
+  const expected = {allGood: true}
+  await Promise.resolve({})
+  t.equals(actual, expected, 'all is good in async')
+})
+
+async function testingAsync () {
+  let firstHappened = false
+  await test('Test function can be awaited', async t => {
+    const actual = {allGood: true}
+    const expected = {allGood: true}
+    await Promise.resolve({})
+    t.equals(actual, expected, 'all is good in awaiting')
+    firstHappened = true
+  })
+
+  test('Test function can be awaited final', t => {
+    t.equals(firstHappened, true, 'tests can happen in order')
+  })
+}
+
+testingAsync()

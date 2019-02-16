@@ -1,12 +1,12 @@
 {
   "name": "smalltest",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "really small javascript tester",
   "main": "index.js",
   "browser": "index.browser.js",
   "jsnext:main": "main.mjs",
   "scripts": {
-    "build": "npm rollup --config",
+    "build": "npx rollup --config",
     "test": "node ./tests/smalltest.node.js",
     "test:browser": "open http:localhost:4041/tests/index.html && python -m SimpleHTTPServer 4041"
   },

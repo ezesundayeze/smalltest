@@ -8,7 +8,7 @@ function test (testName, testFunction) {
   const testObject = {
     equals: (first, second, message) => equals(first, second, message, testName)
   }
-  testFunction(testObject)
+  return testFunction(testObject)
 }
 
 function equals (first, second, message, testName) {
