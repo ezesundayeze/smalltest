@@ -1,6 +1,6 @@
 {
   "name": "smalltest",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "really small javascript tester",
   "main": "index.js",
   "scripts": {

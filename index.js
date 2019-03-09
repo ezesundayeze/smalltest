@@ -1,4 +1,4 @@
-const isEqual = require('./node_modules/lodash.isequal')
+const isEqual = require('lodash.isequal')
 
 let testsStarted = 0
 
