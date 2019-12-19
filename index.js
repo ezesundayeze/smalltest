@@ -1,5 +1,5 @@
-const isEqual = require('lodash.isequal')
-
+// const isEqual = require('lodash.isequal')
+const isEqual = require('./isEqual')
 let testsStarted = 0
 
 function test (testName, testFunction) {

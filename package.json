@@ -18,9 +18,7 @@
     "url": "https://github.com/kdoran/smalltest/issues"
   },
   "homepage": "https://github.com/kdoran/smalltest#readme",
-  "dependencies": {
-    "lodash.isequal": "^4.5.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "rollup": "^1.1.2",
     "rollup-plugin-commonjs": "^9.2.0",
